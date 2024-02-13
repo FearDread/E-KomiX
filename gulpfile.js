@@ -94,8 +94,8 @@ gulp.task('copy', function() {
 gulp.task('server', function() {
   sync.init({
     notify: false,
-    //ui: false,
-    //tunnel: true,
+    ui: false,
+    tunnel: true,
     server: {
       baseDir: 'dest'
     }
@@ -151,6 +151,7 @@ gulp.task('build', gulp.parallel(
   'html',
   'styles',
   'scripts',
+  'images',
   'copy'
 ));
 
