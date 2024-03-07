@@ -4,40 +4,13 @@ const AnimatedBackground = () => {
 
     return (
         <>
-            <div className="animated-background">    
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>   
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>   
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+            <div id="animated-bg">
+                <canvas></canvas>
+                <canvas></canvas>
+                <canvas></canvas>
             </div>
         </>
     );
-
 }
 
 export default AnimatedBackground;
