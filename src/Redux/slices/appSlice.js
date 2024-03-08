@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import "../axios";
+import "../../config/axios";
 
 export const searchBarFunction = createAsyncThunk(
    "products/search",
@@ -34,7 +34,7 @@ export const getProductsInCategories = createAsyncThunk(
 );
 
 export const getItems = createAsyncThunk("products/fetch", async () => {
-   const { data } = await axios.get("/products");
+   const { data } = await axios.get("/admin/products");
    return data;
 });
 
