@@ -2,8 +2,8 @@ import React from "react";
 import { makeStyles, alpha, InputBase, Grid } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import { useSelector, useDispatch } from "react-redux";
-import { searchBarFunction } from "../../Redux/appSlice";
-import { setSearchBarValue } from "../../Redux/appSlice";
+import { searchBarFunction } from "../../Redux/slices/appSlice";
+import { setSearchBarValue } from "../../Redux/slices/appSlice";
 
 const useStyles = makeStyles((theme) => ({
    container: {

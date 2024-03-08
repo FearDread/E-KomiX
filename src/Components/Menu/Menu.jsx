@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles, Grid, Typography } from "@material-ui/core";
-import { closeMenu } from "../../Redux/appSlice";
+import { closeMenu } from "../../Redux/slices/appSlice";
 import { useDispatch } from "react-redux";
 
 import { Link } from "react-router-dom";

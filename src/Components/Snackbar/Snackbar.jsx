@@ -3,7 +3,7 @@ import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
 import { Typography } from "@material-ui/core";
 import { useSelector, useDispatch } from "react-redux";
-import { closeSnackBar } from "../../Redux/appSlice";
+import { closeSnackBar } from "../../Redux/slices/appSlice";
 
 const Alert = (props) => {
    return <MuiAlert elevation={6} variant="filled" {...props} />;

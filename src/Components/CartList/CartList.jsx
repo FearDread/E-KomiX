@@ -11,9 +11,8 @@ import {
    withStyles,
 } from "@material-ui/core";
 import classNames from "classnames";
-import { clearCart } from "../../Redux/cartSlice";
-import { openSnackBar } from "../../Redux/appSlice";
-import { getTotal } from "../../Redux/cartSlice";
+import { getTotal, clearCart } from "../../Redux/slices/cartSlice";
+import { openSnackBar } from "../../Redux/slices/appSlice";
 
 const useStyles = makeStyles((theme) => ({
    container: {

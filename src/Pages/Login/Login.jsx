@@ -12,8 +12,8 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import { Link } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { loginUser } from "../../Redux/userSlice";
-import { openSnackBar } from "../../Redux/appSlice";
+import { loginUser } from "../../Redux/slices/userSlice";
+import { openSnackBar } from "../../Redux/slices/appSlice";
 
 const useStyles = makeStyles((theme) => ({
    container: {

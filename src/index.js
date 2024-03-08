@@ -4,7 +4,7 @@ import App from "./App";
 import { Provider } from "react-redux";
 import { ThemeProvider } from "@material-ui/styles";
 import store from "./Redux/store";
-import theme from "./theme.js";
+import theme from "./config/theme";
 import { BrowserRouter as Router } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

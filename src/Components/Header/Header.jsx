@@ -16,12 +16,11 @@ import {
    Fade,
 } from "@material-ui/core";
 import { useSelector, useDispatch } from "react-redux";
-import { openMenu, closeMenu } from "../../Redux/appSlice";
-import classNames from "classnames";
-import { logOut } from "../../Redux/userSlice";
 import CloseIcon from "@material-ui/icons/Close";
-import { fetchCartItems } from "../../Redux/cartSlice";
-import { resetCart } from "../../Redux/cartSlice";
+import classNames from "classnames";
+import { logOut } from "../../Redux/slices/userSlice";
+import { openMenu, closeMenu } from "../../Redux/slices/appSlice";
+import { resetCart, fetchCartItems } from "../../Redux/slices/cartSlice";
 //import logo from "../../assets/images/logo_transparent.png";
 
 const useStyles = makeStyles((theme) => ({

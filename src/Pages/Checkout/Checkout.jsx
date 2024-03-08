@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { CheckoutInfo, OrderSummary } from "../../Components";
 import { Grid, makeStyles } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
-import { getTotal } from "../../Redux/cartSlice";
+import { getTotal } from "../../Redux/slices/cartSlice";
 
 const useStyles = makeStyles((theme) => ({
    container: {

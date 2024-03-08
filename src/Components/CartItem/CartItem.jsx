@@ -7,8 +7,8 @@ import {
    removeItemFromCart,
    incrementCartItem,
    decrementCartItem,
-} from "../../Redux/cartSlice";
-import { openSnackBar } from "../../Redux/appSlice";
+} from "../../Redux/slices/cartSlice";
+import { openSnackBar } from "../../Redux/slices/appSlice";
 const useStyles = makeStyles((theme) => ({
    container: {
       marginBottom: theme.spacing(3),
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
    imgContainer: {
       height: "auto",
       width: "100%",
-   },
+   },  
    img: {
       height: "100%",
       width: "100%",

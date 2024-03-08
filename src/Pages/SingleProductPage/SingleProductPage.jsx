@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { SingleProduct } from "../../Components";
 import { useParams } from "react-router-dom";
-import { getSingleItem } from "../../Redux/appSlice";
 import { useDispatch } from "react-redux";
-import { CircularProgress, makeStyles, Grid } from "@material-ui/core";
 import { useSelector } from "react-redux";
+import { CircularProgress, makeStyles, Grid } from "@material-ui/core";
+import { getSingleItem } from "../../Redux/slices/appSlice";
 
 const useStyles = makeStyles((theme) => ({
    container: {

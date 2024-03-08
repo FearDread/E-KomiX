@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Grid, makeStyles } from "@material-ui/core";
 import { useSelector, useDispatch } from "react-redux";
-import { getProductsInCategories } from "../../Redux/appSlice";
+import { getProductsInCategories } from "../../Redux/slices/appSlice";
 
 const useStyles = makeStyles((theme) => ({
    container: {

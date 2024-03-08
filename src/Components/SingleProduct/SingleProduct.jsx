@@ -9,8 +9,8 @@ import {
    Chip,
 } from "@material-ui/core";
 import classNames from "classnames";
-import { addToCart } from "../../Redux/cartSlice";
-import { openSnackBar } from "../../Redux/appSlice";
+import { addToCart } from "../../Redux/slices/cartSlice";
+import { openSnackBar } from "../../Redux/slices/appSlice";
 
 const useStyles = makeStyles((theme) => ({
    container: {

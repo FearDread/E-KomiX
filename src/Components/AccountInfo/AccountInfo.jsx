@@ -7,8 +7,8 @@ import {
    makeStyles,
    withStyles,
 } from "@material-ui/core";
-import { logOut } from "../../Redux/userSlice";
-import { resetCart } from "../../Redux/cartSlice";
+import { logOut } from "../../Redux/slices/userSlice";
+import { resetCart } from "../../Redux/slices/cartSlice";
 
 const useStyles = makeStyles((theme) => ({
    container: {

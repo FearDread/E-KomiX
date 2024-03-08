@@ -10,8 +10,8 @@ import {
 } from "@material-ui/core";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { placeOrder, verifyPayment, clearCart } from "../../Redux/cartSlice";
-import { openSnackBar } from "../../Redux/appSlice";
+import { placeOrder, verifyPayment, clearCart } from "../../Redux/slices/cartSlice";
+import { openSnackBar } from "../../Redux/slices/appSlice";
 
 const useStyles = makeStyles((theme) => ({
    container: {

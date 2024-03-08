@@ -12,7 +12,7 @@ import {
 // import { Link } from "react-router-dom";
 // import { Navigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { checkout } from "../../Redux/cartSlice";
+import { checkout } from "../../Redux/slices/cartSlice";
 
 const useStyles = makeStyles((theme) => ({
    formContainer: {

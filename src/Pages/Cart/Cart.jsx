@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { CartList, ScrollBtn } from "../../Components";
 import { useDispatch } from "react-redux";
-import { fetchCartItems } from "../../Redux/cartSlice";
+import { fetchCartItems } from "../../Redux/slices/cartSlice";
 const Cart = () => {
    const dispatch = useDispatch();
 
