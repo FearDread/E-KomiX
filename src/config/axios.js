@@ -1,5 +1,5 @@
 import axios from "axios";
-axios.defaults.baseURL = "http://fear.master.com:4000/fear/api";
+axios.defaults.baseURL = "http://localhost:4000/fear/api";
 // axios.defaults.baseURL = "http://localhost:8080/api";
 axios.interceptors.request.use(function (req) {
    const user = localStorage.getItem("user");

@@ -69,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 const Login = () => {
    const classes = useStyles();
-   const { user, pending, error, errorMessage } = useSelector(
+   const { user, error, errorMessage } = useSelector(
       (state) => state.user
    );
    const dispatch = useDispatch();
@@ -164,7 +164,7 @@ const Login = () => {
                      variant="contained"
                      color="primary"
                      className={classes.marginTopThree}
-                     disabled={pending}
+                     //disabled={pending}
                   >
                      <Typography
                         variant="body1"

@@ -37,9 +37,15 @@ const ItemList = () => {
    const classes = useStyles();
    const { pending, items } = useSelector((state) => state.app);
    const navigate = useNavigate();
+
    return (
       <>
-         {!pending && items.length > 0 ? (
+      {pending ? (
+         <Grid className={classNames(classes.progress, classes.container)} container>
+            <CircularProgress size="5rem" />
+         </Grid>
+      ) : (
+         items && items.length > 0 ? (
             <Grid
                className={classes.container}
                container
@@ -50,7 +56,7 @@ const ItemList = () => {
             >
                {mapThroughItems(items)}
             </Grid>
-         ) : !pending && items.length === 0 ? (
+         ) : ( 
             <Grid
                className={classes.container}
                direction="column"
@@ -70,16 +76,10 @@ const ItemList = () => {
                   Back to home
                </Button>
             </Grid>
-         ) : (
-            <Grid
-               className={classNames(classes.progress, classes.container)}
-               container
-            >
-               <CircularProgress size="5rem" />
-            </Grid>
-         )}
+         )
+      )}
       </>
-   );
+   )
 };
 
 export default ItemList;
