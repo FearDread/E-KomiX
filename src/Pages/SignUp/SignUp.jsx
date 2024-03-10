@@ -18,7 +18,9 @@ import { openSnackBar } from "../../Redux/slices/appSlice";
 const useStyles = makeStyles((theme) => ({
    container: {
       minHeight: "100vh",
-   },
+   }, 
+
+
    formContainer: {
       minHeight: 320,
       minWidth: 320,
@@ -167,6 +169,7 @@ const SignUp = () => {
                            type="text"
                            id="lastName"
                            label="Last Name"
+                           
                            name="lastName"
                         />
                      </Grid>

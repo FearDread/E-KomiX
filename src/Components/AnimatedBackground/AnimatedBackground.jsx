@@ -1,14 +1,34 @@
 import React from "react";
+import "./animated-bg.scss";
 
 const AnimatedBackground = () => {
 
     return (
         <>
-            <div id="animated-bg">
-                <canvas></canvas>
-                <canvas></canvas>
-                <canvas></canvas>
+        <div className="animated-bg">
+            <div className="stars">
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
             </div>
+        </div>
         </>
     );
 }
