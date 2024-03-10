@@ -11,6 +11,7 @@ import {
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import { Link } from "react-router-dom";
 import { Navigate } from "react-router-dom";
+import AnimatedBackground from "../../Components/AnimatedBackground/AnimatedBackground";
 import { useSelector, useDispatch } from "react-redux";
 import { registerUser } from "../../Redux/slices/userSlice";
 import { openSnackBar } from "../../Redux/slices/appSlice";
@@ -18,6 +19,7 @@ import { openSnackBar } from "../../Redux/slices/appSlice";
 const useStyles = makeStyles((theme) => ({
    container: {
       minHeight: "100vh",
+      background: "radial-gradient(ellipse at bottom, #661919 0%, #0a0016 100%)",
    }, 
 
 
@@ -123,6 +125,7 @@ const SignUp = () => {
    }, [errorMessage, error, dispatch]);
    return (
       <>
+      <AnimatedBackground />
          {user && <Navigate to="/account" />}
          <Grid
             container

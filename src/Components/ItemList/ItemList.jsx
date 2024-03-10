@@ -45,7 +45,7 @@ const ItemList = () => {
             <CircularProgress size="5rem" />
          </Grid>
       ) : (
-         items && items.length > 0 ? (
+         (items && items.length > 0) ? (
             <Grid
                className={classes.container}
                container
