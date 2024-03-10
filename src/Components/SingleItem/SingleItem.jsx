@@ -26,8 +26,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const SingleItem = ({ item }) => {
+   console.log('single item call : ', item);
    const classes = useStyles();
-   const { _id, title, image, price } = item;
+   const { _id, name, images, price, quantity, description, info } = item;
    const navigate = useNavigate();
    return (
       <Grid item xs={10} sm={6} lg={3}>
@@ -35,14 +36,14 @@ const SingleItem = ({ item }) => {
             <CardActionArea onClick={() => navigate(`/products/${_id}`)}>
                <CardMedia
                   className={classes.media}
-                  src={image}
-                  title={title}
+                  src={images && images[0] ? images[0].url : ""}
+                  title={name}
                   component="img"
                   loading="lazy"
                />
                <CardContent>
                   <Typography gutterBottom variant="body1" component="h4">
-                     {title.substring(0, 20)}...
+                     {name}
                   </Typography>
                   <Typography
                      variant="body2"
@@ -50,6 +51,13 @@ const SingleItem = ({ item }) => {
                      component="p"
                   >
                      ${price}
+                  </Typography>
+                  <Typography
+                     variant="body2"
+                     color="textSecondary"
+                     component="p"
+                  >
+                     {description}
                   </Typography>
                </CardContent>
             </CardActionArea>

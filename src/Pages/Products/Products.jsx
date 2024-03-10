@@ -5,7 +5,9 @@ import { getCategories, getItems } from "../../Redux/slices/appSlice";
 
 const Products = () => {
    const dispatch = useDispatch();
+   const items = getItems();
 
+   
    useEffect(() => {
       dispatch(getCategories());
       dispatch(getItems());

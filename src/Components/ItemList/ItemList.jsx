@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SingleItem from "../SingleItem/SingleItem";
 import {
    CircularProgress,
@@ -10,6 +10,8 @@ import {
 import { useSelector } from "react-redux";
 import classNames from "classnames";
 import { useNavigate } from "react-router-dom";
+
+
 const mapThroughItems = (items) => {
    return items.map((item, idx) => {
       return <SingleItem key={idx} item={item} />;
@@ -37,6 +39,10 @@ const ItemList = () => {
    const classes = useStyles();
    const { pending, items } = useSelector((state) => state.app);
    const navigate = useNavigate();
+
+   useEffect(() => {
+
+   }, []);
 
    return (
       <>
