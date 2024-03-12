@@ -48,7 +48,7 @@ const SingleProduct = () => {
    const user = useSelector((state) => state.user.user);
 
    const classes = useStyles();
-   const { title, price, description, category, image, _id } = singleItem;
+   const { name, info, price, description, category, images, _id } = singleItem;
    const dispatch = useDispatch();
 
    const handleClick = () => {
@@ -78,12 +78,12 @@ const SingleProduct = () => {
       <Grid container className={classes.container}>
          <Grid item xs={12} sm={4}>
             <div className={classes.imgContainer}>
-               <img src={image} alt={title} className={classes.img} />
+               <img src={images[0].url} alt={name} className={classes.img} />
             </div>
          </Grid>
          <Grid item xs={12} sm={6}>
             <Typography className={classes.marginTopTwo} variant="h4">
-               {title}
+               {name}
             </Typography>
 
             <Chip
@@ -96,6 +96,12 @@ const SingleProduct = () => {
                variant="body1"
             >
                {description}
+            </Typography>
+            <Typography
+               className={classNames(classes.paleText, classes.marginTopTwo)}
+               variant="body1"
+            >
+               {info}
             </Typography>
             <Typography className={classes.marginTopTwo} variant="subtitle2">
                ${price}

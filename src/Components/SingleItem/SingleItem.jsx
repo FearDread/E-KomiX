@@ -26,10 +26,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const SingleItem = ({ item }) => {
-   console.log('single item call : ', item);
    const classes = useStyles();
    const { _id, name, images, price, quantity, description, info } = item;
    const navigate = useNavigate();
+   
    return (
       <Grid item xs={10} sm={6} lg={3}>
          <Card className={classes.root}>

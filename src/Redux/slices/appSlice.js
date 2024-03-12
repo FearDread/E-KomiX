@@ -36,14 +36,13 @@ export const getProductsInCategories = createAsyncThunk(
 export const getItems = createAsyncThunk("products/fetch", async () => {
    const { data } = await axios.get("/products");
 
-   console.log("Product Data: ", data);
    return data.products;
 });
 
 export const getSingleItem = createAsyncThunk(
    "products/getSingleItem",
    async (id) => {
-      const { data } = await axios.get(`/products/single/${id}`);
+      const { data } = await axios.get(`/products/${id}`);
       return data;
    }
 );
