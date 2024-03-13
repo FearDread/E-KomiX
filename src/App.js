@@ -1,120 +1,20 @@
-import React from "react";
-import {
-   Footer,
-   Header,
-   PrivateRoute,
-   CustomSnackbar,
-   Redirect,
-} from "./Components";
-import {
-   Account,
-   Cart,
-   Checkout,
-   Home,
-   Login,
-   Products,
-   SignUp,
-   SingleProductPage,
-   Shipping,
-   Error,
-} from "./Pages";
-import { useSelector } from "react-redux";
-import { Route, Routes } from "react-router-dom";
+import './assets/css/tailwind.output.css';
 
-const App = () => {
-   const { url } = useSelector((state) => state.cart);
-   return (
-      <>
-         <CustomSnackbar />
-         <Routes>
-            <Route
-               path="/"
-               element={
-                  <>
-                     <Header />
-                     <Home />
-                  </>
-               }
-            />
-            <Route
-               path="/products"
-               element={
-                  <>
-                     <Header />
-                     <Products />
-                     <Footer />
-                  </>
-               }
-            />
-            <Route
-               path="/account"
-               element={
-                  <PrivateRoute>
-                     <Header />
-                     <Account />
-                     <Footer />
-                  </PrivateRoute>
-               }
-            />
-            <Route
-               path="/cart"
-               element={
-                  <PrivateRoute>
-                     <Header />
-                     <Cart />
-                     <Footer />
-                  </PrivateRoute>
-               }
-            />
-            {url === "" ? (
-               <Route
-                  path="/checkout"
-                  element={
-                     <PrivateRoute>
-                        <Header />
-                        <Checkout />
-                        <Footer />
-                     </PrivateRoute>
-                  }
-               />
-            ) : (
-               <Route path="/checkout" element={<Redirect url={url} />} />
-            )}
+import Footer from './_components/Footer';
+import RouteContainer from './routes';
 
-            <Route
-               path="/products/:id"
-               element={
-                  <>
-                     <Header />
-                     <SingleProductPage />
-                     <Footer />
-                  </>
-               }
-            />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<SignUp />} />
-            <Route
-               path="*"
-               element={
-                  <>
-                     <Header />
-                     <Error />
-                  </>
-               }
-            />
-            <Route
-               path="/shipping"
-               element={
-                  <PrivateRoute>
-                     <Header />
-                     <Shipping />
-                     <Footer />
-                  </PrivateRoute>
-               }
-            />
-         </Routes>
-      </>
-   );
-};
+
+function App() {
+  return (
+    <>
+      <div className='bg-gray-100 min-h-screen'>
+        <div className='container mx-auto space-y-6'>
+          <RouteContainer />
+          <Footer />
+        </div>
+      </div>
+    </>
+  );
+}
 
 export default App;

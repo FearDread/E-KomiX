@@ -1,11 +1,17 @@
-import React from "react";
-import { Hero } from "../../Components";
+import ProductsContainer from 'components/Products';
+import Hero from 'components/Hero_2';
+//import { useProducts } from 'hooks/useProducts';
+import { ProductsSkeleton } from 'components/Skelton';
+
 const Home = () => {
-   return (
-      <>
-         <Hero />
-      </>
-   );
+//const { data: products, isLoading } = useProducts();
+
+  return (
+    <>
+      <Hero />
+      <ProductsSkeleton />
+    </>
+  );
 };
 
 export default Home;
